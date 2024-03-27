@@ -4,7 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = HeroSlice | TextSlice;
+type HomepageDocumentDataSlicesSlice = HeroSlice;
 
 /**
  * Content for Homepage documents
@@ -60,7 +60,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = HeroSlice | TextSlice;
+type PageDocumentDataSlicesSlice = HeroSlice;
 
 /**
  * Content for Page documents
@@ -251,7 +251,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 

@@ -3,6 +3,7 @@
   "label": "Page",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {
@@ -34,9 +35,6 @@
         "config": {
           "choices": {
             "hero": {
-              "type": "SharedSlice"
-            },
-            "text": {
               "type": "SharedSlice"
             }
           }
