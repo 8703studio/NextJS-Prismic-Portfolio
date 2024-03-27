@@ -3,6 +3,7 @@
   "label": "Settings",
   "repeatable": false,
   "status": true,
+  "format": "page",
   "json": {
     "Main": {
       "site_title": {
@@ -37,6 +38,10 @@
             }
           }
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone"
       }
     }
   }

@@ -3,7 +3,7 @@
   "label": "Homepage",
   "repeatable": false,
   "status": true,
-  "format": "custom",
+  "format": "page",
   "json": {
     "Main": {
       "title": {
@@ -28,6 +28,9 @@
         "config": {
           "choices": {
             "hero": {
+              "type": "SharedSlice"
+            },
+            "text": {
               "type": "SharedSlice"
             }
           }
