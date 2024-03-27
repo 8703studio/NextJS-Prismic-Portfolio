@@ -1,5 +1,6 @@
 import React from "react";
 import { createClient } from "@/prismicio";
+
 import Logo from "./Logo";
 
 
@@ -8,9 +9,9 @@ export default async function Header() {
     const settings = await client.getSingle("settings");
 
   return (
-    <header className="">
-        <Logo />
-    </header>
+    <header className="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4">
+    <Logo />
+  </header>
   );
 }
 

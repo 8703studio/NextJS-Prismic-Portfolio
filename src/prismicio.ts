@@ -36,6 +36,7 @@ export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
         : { next: { revalidate: 5 } },
     ...config,
   });
+  
 
   prismicNext.enableAutoPreviews({
     client,
