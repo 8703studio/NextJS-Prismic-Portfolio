@@ -19,6 +19,10 @@ const routes: prismic.ClientConfig["routes"] = [
   type: "homepage",
   path: "/",
   },
+  {
+  type: "page",
+  path: "/:uid",
+  },
 ];
 
 /**
@@ -36,7 +40,6 @@ export const createClient = (config: prismicNext.CreateClientConfig = {}) => {
         : { next: { revalidate: 5 } },
     ...config,
   });
-  
 
   prismicNext.enableAutoPreviews({
     client,
