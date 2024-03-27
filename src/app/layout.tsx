@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { PrismicPreview } from '@prismicio/next'
-import { repositoryName } from '@/prismicio'
+import { PrismicPreview } from "@prismicio/next";
+import { repositoryName } from "@/prismicio";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-const inter = Inter({ 
-subsets: ["latin"],
-display: 'swap',
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,8 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
-      <PrismicPreview repositoryName={repositoryName} />
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <PrismicPreview repositoryName={repositoryName} />
+        <Footer />
       </body>
     </html>
   );
