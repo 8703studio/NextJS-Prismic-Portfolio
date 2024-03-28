@@ -3,7 +3,6 @@
   "label": "Page",
   "repeatable": true,
   "status": true,
-  "format": "page",
   "json": {
     "Main": {
       "uid": {
