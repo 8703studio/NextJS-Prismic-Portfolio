@@ -3,6 +3,7 @@
   "label": "Page",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {
@@ -33,6 +34,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "marquee": {
+              "type": "SharedSlice"
+            },
             "hero": {
               "type": "SharedSlice"
             }
@@ -41,6 +45,5 @@
       }
     },
     "SEO - METADATA": {}
-  },
-  "format": "custom"
+  }
 }

@@ -1,5 +1,6 @@
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
 
 /**
  * Props for `Marquee`.
@@ -15,7 +16,7 @@ const Marquee = ({ slice }: MarqueeProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for marquee (variation: {slice.variation}) Slices
+      <PrismicNextLink field={slice.primary.contact_link}>Link</PrismicNextLink>
     </section>
   );
 };
