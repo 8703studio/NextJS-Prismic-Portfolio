@@ -35,6 +35,68 @@
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
+        },
+        "what_i_do": {
+          "type": "StructuredText",
+          "config": {
+            "label": "what_i_do",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "bio": {
+          "type": "Text",
+          "config": {
+            "label": "bio",
+            "placeholder": ""
+          }
+        },
+        "mailto": {
+          "type": "Link",
+          "config": {
+            "label": "mailto",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "github": {
+          "type": "Link",
+          "config": {
+            "label": "github",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "linkedin": {
+          "type": "Link",
+          "config": {
+            "label": "linkedin",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "instagram": {
+          "type": "Link",
+          "config": {
+            "label": "instagram",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "experience": {
+          "type": "Text",
+          "config": {
+            "label": "experience",
+            "placeholder": ""
+          }
+        },
+        "project_numbers": {
+          "type": "Text",
+          "config": {
+            "label": "project numbers",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

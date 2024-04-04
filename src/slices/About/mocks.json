@@ -31,18 +31,77 @@
 				"value": "horn",
 				"type": "Text"
 			},
+			"mailto": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"github": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"linkedin": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"instagram": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"experience": {
+				"__TYPE__": "FieldContent",
+				"value": "slight",
+				"type": "Text"
+			},
+			"project_numbers": {
+				"__TYPE__": "FieldContent",
+				"value": "lonely",
+				"type": "Text"
+			},
+			"bio": {
+				"__TYPE__": "FieldContent",
+				"value": "mountain",
+				"type": "Text"
+			},
 			"skills_list": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Mollit proident excepteur irure nostrud cillum magna. Eiusmod sint mollit eiusmod laborum adipisicing ad amet eiusmod. Pariatur aliquip id sunt labore nisi dolore nostrud."
+							"text": "Consectetur eiusmod sunt id ut qui ex id qui Lorem commodo. Exercitation tempor proident commodo nostrud consectetur incididunt magna do."
+						}
+					}
+				]
+			},
+			"what_i_do": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur aute proident est elit id do Lorem qui excepteur consectetur eiusmod mollit occaecat."
 						}
 					}
 				]
 			}
 		},
-		"items": []
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]

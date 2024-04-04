@@ -34,6 +34,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "customer_logos": {
+              "type": "SharedSlice"
+            },
+            "works": {
+              "type": "SharedSlice"
+            },
             "bio": {
               "type": "SharedSlice"
             },
