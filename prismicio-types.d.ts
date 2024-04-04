@@ -186,6 +186,33 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Default variation for Bio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Bio*
+ */
+type BioSliceVariation = BioSliceDefault;
+
+/**
+ * Bio Shared Slice
+ *
+ * - **API ID**: `bio`
+ * - **Description**: Bio
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BioSlice = prismic.SharedSlice<"bio", BioSliceVariation>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
@@ -292,6 +319,36 @@ export type MarqueeSlice = prismic.SharedSlice<
   MarqueeSliceVariation
 >;
 
+/**
+ * Default variation for SidebarBio Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SidebarBioSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *SidebarBio*
+ */
+type SidebarBioSliceVariation = SidebarBioSliceDefault;
+
+/**
+ * SidebarBio Shared Slice
+ *
+ * - **API ID**: `sidebar_bio`
+ * - **Description**: SidebarBio
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SidebarBioSlice = prismic.SharedSlice<
+  "sidebar_bio",
+  SidebarBioSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -312,6 +369,9 @@ declare module "@prismicio/client" {
       SettingsDocumentData,
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
+      BioSlice,
+      BioSliceVariation,
+      BioSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
@@ -320,6 +380,9 @@ declare module "@prismicio/client" {
       MarqueeSliceDefaultPrimary,
       MarqueeSliceVariation,
       MarqueeSliceDefault,
+      SidebarBioSlice,
+      SidebarBioSliceVariation,
+      SidebarBioSliceDefault,
     };
   }
 }

@@ -3,6 +3,8 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  bio: dynamic(() => import("./Bio")),
   hero: dynamic(() => import("./Hero")),
   marquee: dynamic(() => import("./Marquee")),
+  sidebar_bio: dynamic(() => import("./SidebarBio")),
 };

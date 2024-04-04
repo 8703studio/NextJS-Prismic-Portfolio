@@ -1,0 +1,16 @@
+{
+  "id": "sidebar_bio",
+  "type": "SharedSlice",
+  "name": "SidebarBio",
+  "description": "SidebarBio",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": ""
+    }
+  ]
+}
