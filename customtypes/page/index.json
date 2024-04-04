@@ -34,6 +34,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "bio": {
+              "type": "SharedSlice"
+            },
             "marquee": {
               "type": "SharedSlice"
             }

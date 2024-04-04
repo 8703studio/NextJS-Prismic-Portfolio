@@ -1,0 +1,43 @@
+{
+  "id": "bio",
+  "type": "SharedSlice",
+  "name": "About",
+  "description": "Bio",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bioimg": {
+          "type": "Image",
+          "config": {
+            "label": "bioimg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title_1_name": {
+          "type": "Text",
+          "config": {
+            "label": "title_1_name",
+            "placeholder": ""
+          }
+        },
+        "skills_list": {
+          "type": "StructuredText",
+          "config": {
+            "label": "skills_list",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -60,7 +60,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = MarqueeSlice;
+type PageDocumentDataSlicesSlice = BioSlice | MarqueeSlice;
 
 /**
  * Content for Page documents
@@ -186,7 +186,42 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
- * Default variation for Bio Slice
+ * Primary content in *About → Primary*
+ */
+export interface BioSliceDefaultPrimary {
+  /**
+   * bioimg field in *About → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bio.primary.bioimg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bioimg: prismic.ImageField<never>;
+
+  /**
+   * title_1_name field in *About → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bio.primary.title_1_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title_1_name: prismic.KeyTextField;
+
+  /**
+   * skills_list field in *About → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bio.primary.skills_list
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  skills_list: prismic.RichTextField;
+}
+
+/**
+ * Default variation for About Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -194,17 +229,17 @@ export type AllDocumentTypes =
  */
 export type BioSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<BioSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *Bio*
+ * Slice variation for *About*
  */
 type BioSliceVariation = BioSliceDefault;
 
 /**
- * Bio Shared Slice
+ * About Shared Slice
  *
  * - **API ID**: `bio`
  * - **Description**: Bio
@@ -319,36 +354,6 @@ export type MarqueeSlice = prismic.SharedSlice<
   MarqueeSliceVariation
 >;
 
-/**
- * Default variation for SidebarBio Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SidebarBioSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Record<string, never>,
-  never
->;
-
-/**
- * Slice variation for *SidebarBio*
- */
-type SidebarBioSliceVariation = SidebarBioSliceDefault;
-
-/**
- * SidebarBio Shared Slice
- *
- * - **API ID**: `sidebar_bio`
- * - **Description**: SidebarBio
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type SidebarBioSlice = prismic.SharedSlice<
-  "sidebar_bio",
-  SidebarBioSliceVariation
->;
-
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -370,6 +375,7 @@ declare module "@prismicio/client" {
       SettingsDocumentDataNavigationItem,
       AllDocumentTypes,
       BioSlice,
+      BioSliceDefaultPrimary,
       BioSliceVariation,
       BioSliceDefault,
       HeroSlice,
@@ -380,9 +386,6 @@ declare module "@prismicio/client" {
       MarqueeSliceDefaultPrimary,
       MarqueeSliceVariation,
       MarqueeSliceDefault,
-      SidebarBioSlice,
-      SidebarBioSliceVariation,
-      SidebarBioSliceDefault,
     };
   }
 }
