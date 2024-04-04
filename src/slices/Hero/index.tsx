@@ -1,3 +1,4 @@
+import Bounded from "@/app/components/Bounded";
 import { Content } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { SliceComponentProps } from "@prismicio/react";
@@ -12,7 +13,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
@@ -28,7 +29,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <PrismicNextImage field={slice.primary.heroimg} />
         </div>
       </div>
-    </section>
+    </Bounded>
   );
 };
 

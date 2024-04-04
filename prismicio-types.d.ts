@@ -60,7 +60,7 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
-type PageDocumentDataSlicesSlice = MarqueeSlice | HeroSlice;
+type PageDocumentDataSlicesSlice = MarqueeSlice;
 
 /**
  * Content for Page documents
