@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#000] text-slate-100">
+    <html lang="en" className="bg-[#ff3535] text-slate-100">
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
