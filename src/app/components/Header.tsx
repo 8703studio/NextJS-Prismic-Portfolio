@@ -9,7 +9,7 @@ async function Header() {
 
   return (
     <header>
-    <div className="flex">
+    <div className="flex justify-between">
       <div>Logo</div>
       <div><Nav></Nav></div>
       <div className="more-info"> Hello</div>
