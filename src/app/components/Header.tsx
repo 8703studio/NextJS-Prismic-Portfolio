@@ -1,6 +1,7 @@
 import React from "react";
 import { createClient } from "@/prismicio";
 import Link from "next/link";
+import { PrismicNextImage } from "@prismicio/next";
 
 
 export default 
@@ -11,14 +12,12 @@ async function Header() {
   return (
     <header>
     <div className="flex justify-between">
-      <div>Logo</div>
+      <div><PrismicNextImage field={settings.data.logo} /></div>
       <div>
       <nav>
     <ul>
-        <li>
-        <Link href="/" aria-label="Homepage">{settings.data.name}
-        </Link>
-        </li>
+        <li></li>
+        <li></li>
     </ul>
 </nav>
       </div>
