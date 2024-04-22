@@ -171,15 +171,37 @@ export interface SettingsDocumentDataFooternavItem {
  */
 interface SettingsDocumentData {
   /**
-   * Site TItle field in *Settings*
+   * Name field in *Settings*
    *
-   * - **Field Type**: Title
-   * - **Placeholder**: Global title of the site
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * site_title field in *Settings*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
    * - **API ID Path**: settings.site_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  site_title: prismic.TitleField;
+  site_title: prismic.RichTextField;
+
+  /**
+   * logo field in *Settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
 
   /**
    * Navigation field in *Settings*

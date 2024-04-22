@@ -1,12 +1,15 @@
 import "./globals.css";
 
+
 import type { Metadata } from "next";
 import Link from "next/link";
-import { asText } from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
+import { asText } from "@prismicio/client";
 import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
+
+
 import { createClient, repositoryName } from "@/prismicio";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

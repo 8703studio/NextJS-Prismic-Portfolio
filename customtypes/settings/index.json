@@ -6,13 +6,28 @@
   "format": "custom",
   "json": {
     "Main": {
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
       "site_title": {
         "type": "StructuredText",
         "config": {
-          "label": "Site TItle",
-          "placeholder": "Global title of the site",
+          "label": "site_title",
+          "placeholder": "",
           "allowTargetBlank": true,
-          "single": "heading3"
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "navigation": {
