@@ -4,72 +4,66 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = MarqueeSlice | HeroSlice;
+type HomeDocumentDataSlicesSlice = HeroSlice;
 
 /**
- * Content for Homepage documents
+ * Content for home documents
  */
-interface HomepageDocumentData {
+interface HomeDocumentData {
   /**
-   * Title field in *Homepage*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: Title of the document
-   * - **API ID Path**: homepage.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Meta Description field in *Homepage*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Description used for SEO
-   * - **API ID Path**: homepage.meta_description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta title field in *Homepage*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: homepage.meta_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *Homepage*
+   * Slice Zone field in *home*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: homepage.slices[]
+   * - **API ID Path**: home.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<HomeDocumentDataSlicesSlice> /**
+   * Meta Description field in *home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: home.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *home*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: home.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
 }
 
 /**
- * Homepage document from Prismic
+ * home document from Prismic
  *
- * - **API ID**: `homepage`
+ * - **API ID**: `home`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomepageDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<HomepageDocumentData>,
-    "homepage",
-    Lang
-  >;
+export type HomeDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 type PageDocumentDataSlicesSlice =
   | CustomerLogosSlice
@@ -394,10 +388,7 @@ export type SettingsDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes =
-  | HomepageDocument
-  | PageDocument
-  | SettingsDocument;
+export type AllDocumentTypes = HomeDocument | PageDocument | SettingsDocument;
 
 /**
  * Primary content in *About → Primary*
@@ -765,9 +756,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      HomepageDocument,
-      HomepageDocumentData,
-      HomepageDocumentDataSlicesSlice,
+      HomeDocument,
+      HomeDocumentData,
+      HomeDocumentDataSlicesSlice,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,

@@ -1,24 +1,22 @@
-// src/app/page.tsx
-
-import { asText } from "@prismicio/client";
+import { Metadata } from "next";
 import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "@/prismicio";
 import { components } from "@/slices";
 
-export async function generateMetadata() {
+export default async function Page() {
   const client = createClient();
-  const page = await client.getSingle("homepage");
-
-  return {
-    title: asText(page.data.title),
-    description: page.data.meta_description,
-  };
-}
-
-export default async function Home() {
-  const client = createClient();
-  const page = await client.getSingle("homepage");
+  const page = await client.getSingle("home");
 
   return <SliceZone slices={page.data.slices} components={components} />;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+  const page = await client.getSingle("home");
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+  };
 }
