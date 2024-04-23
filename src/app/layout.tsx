@@ -12,6 +12,7 @@ import { PrismicPreview } from "@prismicio/next";
 import { createClient, repositoryName } from "@/prismicio";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 
 const inter = Inter({
   subsets: ["latin"],

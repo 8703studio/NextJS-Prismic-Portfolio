@@ -6,6 +6,13 @@
   "format": "page",
   "json": {
     "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
       "title": {
         "type": "StructuredText",
         "config": {
@@ -20,6 +27,13 @@
         "config": {
           "label": "Meta Description",
           "placeholder": "Description used for SEO"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta title",
+          "placeholder": ""
         }
       },
       "slices": {

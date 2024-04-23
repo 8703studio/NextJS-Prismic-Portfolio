@@ -14,7 +14,7 @@ export default async function Header() {
           <div className="flex flex-1 mr-auto justify-start">
             <ul>
               <li>
-                you can contact me @
+              <>{settings.data.contact_text}</><br />
                 <PrismicNextLink field={settings.data.mailto}>
                   hello@87-03.org
                 </PrismicNextLink>

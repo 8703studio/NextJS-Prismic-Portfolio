@@ -131,6 +131,13 @@
           "label": "copyright",
           "placeholder": ""
         }
+      },
+      "contact_text": {
+        "type": "Text",
+        "config": {
+          "label": "contact text",
+          "placeholder": ""
+        }
       }
     },
     "SEO": {
