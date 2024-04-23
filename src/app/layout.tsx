@@ -1,6 +1,5 @@
 import "./globals.css";
 
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PrismicText } from "@prismicio/react";
@@ -35,9 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-[#ff3535] text-slate-100">
+    <html lang="fr" className="bg-[#ff3535] text-slate-100">
       <body className={inter.className}>
-        <Header />
+        <Header />     
         <main>{children}</main>
         <Footer />
         <PrismicPreview repositoryName={repositoryName} />

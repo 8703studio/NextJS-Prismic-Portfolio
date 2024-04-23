@@ -610,16 +610,6 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   tagline: prismic.KeyTextField;
-
-  /**
-   * hero-img field in *Hero → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.primary.heroimg
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  heroimg: prismic.ImageField<never>;
 }
 
 /**

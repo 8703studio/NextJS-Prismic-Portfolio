@@ -25,14 +25,6 @@
             "label": "tagline",
             "placeholder": ""
           }
-        },
-        "heroimg": {
-          "type": "Image",
-          "config": {
-            "label": "hero-img",
-            "constraint": {},
-            "thumbnails": []
-          }
         }
       },
       "items": {}

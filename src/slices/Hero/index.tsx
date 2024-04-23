@@ -26,7 +26,6 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         <span className="block">{slice.primary.studioname}</span>
         <span className="mt-6 block">{slice.primary.tagline}</span>
         </h1>
-        <PrismicNextImage field={slice.primary.heroimg} />
         </div>
       </div>
     </Bounded>

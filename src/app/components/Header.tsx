@@ -3,7 +3,6 @@ import { createClient } from "@/prismicio";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicNextLink } from "@prismicio/next";
-import Bounded from "./Bounded";
 
 export default async function Header() {
   const client = createClient();
@@ -15,7 +14,7 @@ export default async function Header() {
           <div className="flex flex-1 mr-auto justify-start">
             <ul>
               <li>
-                you can contact me @{" "}
+                you can contact me @
                 <PrismicNextLink field={settings.data.mailto}>
                   hello@87-03.org
                 </PrismicNextLink>
@@ -39,6 +38,7 @@ export default async function Header() {
               </ul>
             </nav>
           </div>
+
         </div>
         <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
     </header>
