@@ -1,18 +1,14 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import Link from "next/link";
-import { PrismicText } from "@prismicio/react";
-import { PrismicNextLink } from "@prismicio/next";
 import { asText } from "@prismicio/client";
 import { Inter } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 
 
 import { createClient, repositoryName } from "@/prismicio";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { LanguageSwitcher } from "./components/LanguageSwitcher";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,8 +33,10 @@ export default function RootLayout({
   return (
     <html lang="fr" className="bg-[#ff3535] text-slate-100">
       <body className={inter.className}>
-        <Header />     
+        <Nav />
+        <hr className="h-px bg-gray-200 border-0"></hr>
         <main>{children}</main>
+        <hr className="h-px bg-gray-200 border-0"></hr>
         <Footer />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
