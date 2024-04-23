@@ -16,8 +16,8 @@ const Bio = ({ slice }: BioProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="block md:block bg-neutral-50 w-full md:w-80 h-fit sticky top-3">
-        <div>helllllllooo</div>
+      <div>
+        <p>hello</p>
       </div>
     </Bounded>
   );

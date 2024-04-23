@@ -7,7 +7,7 @@ import { PrismicPreview } from "@prismicio/next";
 
 
 import { createClient, repositoryName } from "@/prismicio";
-import Nav from "@/components/Nav";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const inter = Inter({
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="bg-[#ff3535] text-slate-100">
       <body className={inter.className}>
-        <Nav />
+        <Header />
         <hr className="h-px bg-gray-200 border-0"></hr>
         <main>{children}</main>
         <hr className="h-px bg-gray-200 border-0"></hr>

@@ -503,6 +503,16 @@ export interface BioSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   project_numbers: prismic.KeyTextField;
+
+  /**
+   * description field in *About → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: bio.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
 }
 
 /**

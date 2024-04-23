@@ -95,6 +95,17 @@
 						}
 					}
 				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco magna occaecat consequat voluptate dolor ut commodo pariatur amet aliqua consequat ut labore id et."
+						}
+					}
+				]
 			}
 		},
 		"items": [
