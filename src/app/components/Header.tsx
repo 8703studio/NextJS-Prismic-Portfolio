@@ -3,18 +3,19 @@ import { createClient } from "@/prismicio";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicNextLink } from "@prismicio/next";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default async function Header() {
   const client = createClient();
   const settings = await client.getSingle("settings");
-
-  return (
-    <header>
+    return (
+      <header>
         <div className="flex mx-10 items-center">
           <div className="flex flex-1 mr-auto justify-start">
             <ul>
               <li>
-              <>{settings.data.contact_text}</><br />
+                <>{settings.data.contact_text}</>
+                <br />
                 <PrismicNextLink field={settings.data.mailto}>
                   hello@87-03.org
                 </PrismicNextLink>
@@ -28,6 +29,7 @@ export default async function Header() {
             </Link>
           </div>
           <div className="flex flex-1 flex-row ml-auto justify-end md:ml-auto md:mr-auto">
+            {/* Navlinks */}
             <nav className="hidden md:block">
               <ul className="flex items-center space-x-8">
                 {settings.data.navigation.map(({ link, label }, index) => (
@@ -37,10 +39,9 @@ export default async function Header() {
                 ))}
               </ul>
             </nav>
-          </div>
-
         </div>
+      </div>
         <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700"></hr>
-    </header>
-  );
-}
+      </header>
+    );
+  };
